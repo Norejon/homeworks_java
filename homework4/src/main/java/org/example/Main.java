@@ -1,10 +1,15 @@
 package org.example;
 
+import part1.User;
+import part3.Gender;
+import part3.Human;
+import part3.Skills;
 import part4.Person;
 import part4.Pet;
 import part4.Poroda;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +25,10 @@ public class Main {
 //        System.out.println(sorted);
 //        List<User> sortedreverse = users.stream().sorted((u1,u2)->u2.getAge()-u1.getAge()).collect(Collectors.toList());
 //        System.out.println(sortedreverse);
+//        List<User> sortedname = users.stream().sorted((u1,u2)->u1.getName().length()- u2.getName().length()).collect(Collectors.toList());
+//        System.out.println(sortedname);
+//        List<User> sortednamereverse = users.stream().sorted((u1,u2)->u2.getName().length()- u1.getName().length()).collect(Collectors.toList());
+//        System.out.println(sortednamereverse);
 //
 //        //alternative variant
 ////        users.sort(Comparator.comparing(user -> user.getAge()));
@@ -61,9 +70,9 @@ public class Main {
 //        skills3.add(new Skills("pro", 1000));
 
 
-        //v1
+    //    //v1
 //        Set<Human> humans = new HashSet<Human>();
-        //v2
+  //    //  v2
 //        Set<Human> humans = new TreeSet<Human>();
 //
 //        humans.add(new Human(2,"Nick","Smith","bobik@gmail.com",22, Gender.MALE,skills2,"zaporojets",1990,1488));
@@ -81,11 +90,13 @@ public class Main {
 //        while (iterator.hasNext()){
 //            iterator.next();
 //        }
-        //v1
+  //      //v1
 //        humans.removeIf(human -> human.getGender() ==Gender.MALE);
 //        System.out.println(humans);
-        //v2
+//        //v2
 //        System.out.println(humans);
+//        List<Human> hum= humans.stream().sorted((h1,h2)-> h2.getSkills().size()-h1.getSkills().size()).collect(Collectors.toList());
+//        System.out.println(hum);
 
         //part4
         LinkedList<Pet> pets = new LinkedList<Pet>();

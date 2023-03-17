@@ -33,4 +33,8 @@ public class Human implements Comparable<Human> {
     public int compareTo(Human o) {
         return this.skills.size() - o.getSkills().size();
     }
+
+    public int compareToreverse(Human o){
+        return o.getSkills().size() - this.skills.size();
+    }
 }
